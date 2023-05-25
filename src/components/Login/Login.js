@@ -54,7 +54,7 @@ const Login = () => {
 
       localStorage.setItem("userNumber", mob);
 
-      navigate("/cartdetails");
+      navigate("/payment");
     } else {
       toast.error("Please enter the right OTP", {
         position: "top-right",

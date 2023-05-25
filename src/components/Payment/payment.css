@@ -1,0 +1,12 @@
+.CartHeader{
+color: #e8388d;
+  align: center;
+  font-weight: 100%;
+}
+.proceedtopayment{
+    border: none;
+    background-color: #e8388d;
+    color: white;
+    border-radius: 5px;
+    height: 30px;
+}
