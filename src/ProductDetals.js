@@ -53,7 +53,7 @@ function ProductDetails() {
                         <img src={productDetails[id - 1].image} alt="" />
                         <div className="btns">
                             <button className="addtocart" onClick={() => handleAdd(productDetails[id - 1])} >Add to Cart</button>
-                            <button className="buynow">Buy Now</button>
+                            <Link to="/login"><button className="buynow">Buy Now</button></Link>
                         </div>
                     </div>
 
