@@ -1,0 +1,64 @@
+.LoginContainer{
+    display: relative;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: pink;
+  padding: 50px 0;
+}
+
+.LoginBox{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    gap: 30px;
+    background-color: #ffffff;
+    width: 40%;
+    min-height: 500px;
+    padding: 50px;
+    margin: auto;
+    border-radius: 5px; 
+}
+
+.Typography{
+    font-size: 18px;
+  font-weight: bold;
+}
+
+.OtpInput{
+    border-bottom: 2px solid hotpink;
+  box-sizing: border-box;
+  padding: 6px;
+  border-radius: 3px;
+  margin-bottom: 15px;
+}
+
+.MyInput{
+    box-sizing: border-box;
+  width: 100%;
+  padding: 5px 8px;
+  border: none;
+  text-align: center;
+  outline: none;
+}
+
+.Mybutton{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  height: 45px;
+}
+.Condition{
+    a {
+        color: hotpink;
+      }
+}

@@ -1,0 +1,26 @@
+
+.cartcontainer1{
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.cartcontainer1 img{
+    height: 55vh;
+    width: 250px;
+}
+
+.rating1{
+    background-color: green;
+    color: white;
+    border-radius: 50%;
+    display: inline;
+    padding: 5px;
+    
+}
+.reviews1{
+    font-size: small;
+}
+.flexcontainer1{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
