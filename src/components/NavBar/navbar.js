@@ -97,7 +97,7 @@ const NavBar = (props) => {
                         <div class="CartIcon">
                             <img src={Cart} alt="" />
                         </div>
-                        <p>Cart {items.length}</p>
+                        <p style={{color:"#333333"}}>Cart {items.length}</p>
                     </div>
                     </Link>
                     }

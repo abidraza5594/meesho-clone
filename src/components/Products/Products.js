@@ -62,7 +62,7 @@ const Products = () => {
             <main class="product_category_display" id="product_category_displayId">
                 <ProductCart  filteredData={filteredData} products={products}/>
             </main>
-            <Pagination />
+        
         </div>
     </div>);
 }
