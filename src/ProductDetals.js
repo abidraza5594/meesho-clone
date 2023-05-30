@@ -38,6 +38,13 @@ function ProductDetails() {
             console.log('Error fetching data:', error);
         }
     };
+    
+    if (productDetails===null){console.log("null----------")}else{
+        for(let i of productDetails){
+            console.log(i.category)
+        }
+    }
+    console.log("productDetails",productDetails)
 
 
 
@@ -81,23 +88,27 @@ function ProductDetails() {
                 </div>
                 
                 <h3>Related Products</h3>
-                <div style={{display:"flex",gap:"20px",width:"400px",height:"30vh"}}>
+                <div style={{display:"flex",
+                gap:"20px",width:"300px",height:"30vh"}}>
                 {productDetails.map((data) =>
-                <Link to={`/details/${data.id}`} style={{textDecoration:"none"}}>
-                    <div key={data.id} className="cartcontainer1" >
-                        <img src={data.image} alt="" />
-                        <h2>{data.title}</h2>
-                        <div className="flexcontainer1">
-                            <span> &#8377; {data.price}</span><small>onwards</small>
+                    <>
+                        {data.category===productDetails[id-1].category ?
+                        <Link to={`/details/${data.id}`} style={{textDecoration:"none"}}>
+                        <div key={data.id} className="cartcontainer1">
+                            <img src={data.image} alt="" />
+                            <h2 style={{fontSize:"15px"}}>{data.title}</h2>
+                            <div className="flexcontainer1">
+                                <span> &#8377; {data.price}</span><small>onwards</small>
+                            </div>
+    
+                            <div className="flexcontainer1">
+                                <div className="rating1">{data.rating.rate}</div>
+                                <span className="reviews1">{data.rating.count} Reviews</span>
+                            </div>
+    
                         </div>
-
-                        <div className="flexcontainer1">
-                            <div className="rating1">{data.rating.rate}</div>
-                            <span className="reviews1">{data.rating.count} Reviews</span>
-                        </div>
-
-                    </div>
-                    </Link>
+                        </Link>:""}
+                    </>
                 )}
 
                 </div>

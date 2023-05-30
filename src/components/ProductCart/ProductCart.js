@@ -25,7 +25,7 @@ const ProductCart = (props) => {
                                 <Link to={`details/${data.id}`} style={{ textDecoration: "none" }}>
                                     <div key={data.id} className="cartcontainer1" >
                                         <img src={data.image} alt="" />
-                                        <h2>{data.title}</h2>
+                                        <h2 style={{fontSize:"15px"}}>{data.title}</h2>
                                         <div className="flexcontainer1">
                                             <span> &#8377; {data.price}</span><small>onwards</small>
                                         </div>
@@ -44,7 +44,7 @@ const ProductCart = (props) => {
                                 <Link to={`details/${data.id}`} style={{ textDecoration: "none" }}>
                                     <div key={data.id} className="cartcontainer1" >
                                         <img src={data.image} alt="" />
-                                        <h2>{data.title}</h2>
+                                        <h2 style={{fontSize:"15px"}}>{data.title}</h2>
                                         <div className="flexcontainer1">
                                             <span> &#8377; {data.price}</span><small>onwards</small>
                                         </div>
