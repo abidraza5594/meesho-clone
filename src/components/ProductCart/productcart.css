@@ -2,10 +2,22 @@
 .cartcontainer1{
     cursor: pointer;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.cartcontainer1:hover{
+    transform: translateX(2px);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 .cartcontainer1 img{
     height: 55vh;
     width: 250px;
+    
 }
 
 .rating1{

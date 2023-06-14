@@ -88,8 +88,7 @@ function ProductDetails() {
                 </div>
                 
                 <h3>Related Products</h3>
-                <div style={{display:"flex",
-                gap:"20px",width:"300px",height:"30vh"}}>
+                <div className="relatedproduct">
                 {productDetails.map((data) =>
                     <>
                         {data.category===productDetails[id-1].category ?

@@ -66,3 +66,16 @@
 .fulldetails{
     width: 100%;
 }
+
+.relatedproduct{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.cartcontainer1{
+    width: 300px;
+}
