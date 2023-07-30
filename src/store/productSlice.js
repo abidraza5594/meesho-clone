@@ -13,12 +13,6 @@ const productSlice = createSlice({
         status: STATUSES.IDLE,
     },
     reducers: {
-        // setProducts(state, action) {
-        //     state.data = action.payload;
-        // },
-        // setStatus(state, action) {
-        //     state.status = action.payload;
-        // },
     },
     extraReducers: (builder) => {
         builder

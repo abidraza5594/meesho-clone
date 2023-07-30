@@ -92,6 +92,8 @@ function ProductDetails() {
                 {productDetails.map((data) =>
                     <>
                         {data.category===productDetails[id-1].category ?
+
+                        data.title!==productDetails[id-1].title ?
                         <Link to={`/details/${data.id}`} style={{textDecoration:"none"}}>
                         <div key={data.id} className="cartcontainer1">
                             <img src={data.image} alt="" />
@@ -99,14 +101,15 @@ function ProductDetails() {
                             <div className="flexcontainer1">
                                 <span> &#8377; {data.price}</span><small>onwards</small>
                             </div>
-    
                             <div className="flexcontainer1">
                                 <div className="rating1">{data.rating.rate}</div>
                                 <span className="reviews1">{data.rating.count} Reviews</span>
                             </div>
-    
                         </div>
-                        </Link>:""}
+                        </Link>
+                         : ""
+                        
+                        :""}
                     </>
                 )}
 
