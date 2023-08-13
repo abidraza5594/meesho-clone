@@ -9,7 +9,8 @@ const ProductCart = (props) => {
     const lod = useContext(loading)
     console.log(Allproducts)
     console.log(loading)
-    const { products, filteredData } = props;
+    const { products, filteredData,inputSearchData } = props;
+    
     return (
         <>
             {lod ? (

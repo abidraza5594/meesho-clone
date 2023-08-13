@@ -4,6 +4,7 @@ import { useState ,useEffect} from "react";
 const Products = () => {
     const [selectedCheckbox, setSelectedCheckbox] = useState('');
     const [products,setproducts]=useState([])
+    const [searchwithTitle,setSearchWithTitle]=useState([])
     useEffect(() => {
         fetchData();
     }, []);
@@ -21,6 +22,12 @@ const Products = () => {
     };
     const filteredData = products.filter((item) => item.category === selectedCheckbox);
 
+    const SearchHandler=(e)=>{
+        // const searchdata=products.filter((item)=>item.title.toLowerCase().includes(e.target.value.toLowerCase()))
+        console.log(e.target.value,"inputSearchData")
+        // setSearchWithTitle(searchdata)
+    }
+
     return (<div class="Product_container_You">
         <h1 >Products For You</h1>
         <div class="product_container_you_content">
@@ -28,9 +35,15 @@ const Products = () => {
                 <h3>Category</h3>
                 <div class="search_category_input">
                     <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="text" placeholder="Search" />
+                    <input type="text" onChange={SearchHandler} placeholder="Search" />
                 </div>
                 <div class="display_Category_list">
+                <label forHtml="all-product" >
+                        <input type="radio" value="all-product"
+                            checked={selectedCheckbox === "all-product"}
+                            onChange={handleCheckboxChange} />
+                        <span>all</span>
+                    </label>
                     <label forHtml="men's clothing" >
                         <input type="radio" value="men's clothing"
                             checked={selectedCheckbox === "men's clothing"}
@@ -60,7 +73,7 @@ const Products = () => {
 
             </aside>
             <main class="product_category_display" id="product_category_displayId">
-                <ProductCart  filteredData={filteredData} products={products}/>
+                <ProductCart inputSearchData={searchwithTitle}  filteredData={filteredData} products={products}/>
             </main>
         
         </div>
