@@ -2,7 +2,7 @@ import "./cartdetails.css"
 import { getNodeText } from '@testing-library/react';
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { remove } from '../../store/cartSlice';
+import { remove ,add} from '../../store/cartSlice';
 import { Link, Navigate } from "react-router-dom";
 const CardDetails = () => {
     const dispatch = useDispatch();
@@ -15,27 +15,40 @@ const CardDetails = () => {
       return accumulator + currentValue.price;
     }, 0);
     
+    const quantityIncreament=(data)=>{
+      // dispatch(add())
+    }
+    const quantityDeacreament=()=>{}
 
     return (
         <div className="main-cart-item">
 
             <div className="leftconatiner">
-              <h3>Cart : {products.length} {products.length<=1 ? "item":"items"}</h3>
+            { products.length==0 ? <> <h1>Cart is Empty..!</h1> </> : 
+              
+              <>
               {products.map((data)=>
-                <div className="innercartitem" key={data.id}>
+              <div className="innercartitem" key={data.id}>
                 <img src={data.image} alt="" />
+
                 <div className="innercartitemleft">
-                  <p>{data.title}</p>
-                  <span>Size: L</span> <span>Qty: 1</span>
+                  <p style={{fontSize:"15px"}}>{data.title}</p>
+                  <p>Price : {data.price}   <span style={{marginLeft:"20px"}}>Size : L</span> </p>
+                  <span>Qty : <button>-</button> {1} <button onClick={()=>quantityIncreament()}>+</button> </span>
                   <button onClick={() => handleRemove(data.id)}>REMOVE</button>
                 </div>
               </div>
               )}
+              </> 
+            }
             </div>
 
 
             <div className="rightcartitem">
-                <h3>Price Details</h3>
+            <div className="totalprice">
+            <span>Price Details</span>
+                <span>Cart : {products.length} {products.length<=1 ? "item":"items"}</span>
+            </div>
                 <div className="spacebetween">
                     <div>Total Product Price:</div>
                     <div>&#x24;{allproductPrice}</div>  

@@ -23,9 +23,10 @@ const Products = () => {
     const filteredData = products.filter((item) => item.category === selectedCheckbox);
 
     const SearchHandler=(e)=>{
-        // const searchdata=products.filter((item)=>item.title.toLowerCase().includes(e.target.value.toLowerCase()))
-        console.log(e.target.value,"inputSearchData")
-        // setSearchWithTitle(searchdata)
+        const searchdata=products.filter((item)=>item.title.toLowerCase().includes(e.target.value.toLowerCase()))
+        console.log(products,"inputSearchData")
+        setSearchWithTitle(searchdata)
+        setproducts(searchwithTitle)
     }
 
     return (<div class="Product_container_You">

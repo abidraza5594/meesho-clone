@@ -7,8 +7,7 @@ import { loading, Allproducts } from "../../App";
 const ProductCart = (props) => {
     const pro = useContext(Allproducts)
     const lod = useContext(loading)
-    console.log(Allproducts)
-    console.log(loading)
+    
     const { products, filteredData,inputSearchData } = props;
     
     return (
@@ -54,11 +53,11 @@ const ProductCart = (props) => {
                                             <div className="rating1">{data.rating.rate}</div>
                                             <span className="reviews1">{data.rating.count} Reviews</span>
                                         </div>
-
                                     </div>
                                 </Link>
                             )}
-                        </>}
+                        </>
+                        }
                 </>
             }
         </>

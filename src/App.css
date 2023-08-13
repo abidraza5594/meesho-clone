@@ -234,9 +234,19 @@ nav ul li:hover .subMenu{
 
 }
 .submenuList{
+    
     display: flex;
-
+    justify-content: center;
+    justify-content: space-around;
 }
+.submenuList :first-child{
+    color: #f63497;
+    
+}
+.submenuList >p  :hover{
+    color: #f63497;
+}
+
 .column{
     margin-right: 40px;
 }
