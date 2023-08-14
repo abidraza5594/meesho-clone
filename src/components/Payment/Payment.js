@@ -61,12 +61,12 @@ export const Payment = () => {
         <div class="wraper">
           {" "}
           <h2 className="phead" style={{ top: "0px" }}>
-            Payment of :<span style={{ color: "rgb(134, 255, 100)" }}> &#x24;{allproductPrice}</span>
+            Payment of :<span style={{ color: "rgb(134, 255, 100)",fontSize:"25px" }}> &#x24;{allproductPrice.toFixed(2)}</span>
             {/* {Math.floor(OrdertoPay * 100 - 33)}/- */}
           </h2>
           <from>
             <br></br>
-            <label htmlFor="cnum">Enter the card number :</label>
+            <label htmlFor="cnum">Enter the card number : </label>
             <input
               id="cnum"
               type="tel"
@@ -78,7 +78,7 @@ export const Payment = () => {
             />
             <br></br>
             <br></br>
-            <label htmlFor="expiry">Enter the expiry date :</label>
+            <label htmlFor="expiry">Enter the expiry date : </label>
             <input
               id="expiry"
               value={exDate}
@@ -90,7 +90,7 @@ export const Payment = () => {
             />
             <br></br>
             <br></br>
-            <label htmlFor="cvv">Enter your CVV :</label>
+            <label htmlFor="cvv">Enter your CVV : </label>
             <input
               id="cvv"
               type="tel"
@@ -108,7 +108,7 @@ export const Payment = () => {
           </from>
         </div>
       </div>
-      <Footer />{" "}
+      <div style={{marginTop:"50px"}}><Footer /></div>
       <ToastContainer
         position="top-right"
         autoClose={5000}

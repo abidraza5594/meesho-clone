@@ -516,6 +516,9 @@ nav ul li:hover .subMenu{
     display: flex;
     flex-direction: column;
 }
+.display_Category_list span{
+    font-size: 18px;
+}
 .display_Category_list label{
     margin: 3px 0px;
     text-transform: capitalize;

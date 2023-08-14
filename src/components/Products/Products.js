@@ -1,10 +1,10 @@
 import ProductCart from "../ProductCart/ProductCart";
 import Pagination from "../Pagination/Pagination";
-import { useState ,useEffect} from "react";
+import { useState, useEffect } from "react";
 const Products = () => {
     const [selectedCheckbox, setSelectedCheckbox] = useState('');
-    const [products,setproducts]=useState([])
-    const [searchwithTitle,setSearchWithTitle]=useState([])
+    const [products, setproducts] = useState([])
+    const [searchwithTitle, setSearchWithTitle] = useState([])
     useEffect(() => {
         fetchData();
     }, []);
@@ -22,9 +22,9 @@ const Products = () => {
     };
     const filteredData = products.filter((item) => item.category === selectedCheckbox);
 
-    const SearchHandler=(e)=>{
-        const searchdata=products.filter((item)=>item.title.toLowerCase().includes(e.target.value.toLowerCase()))
-        console.log(products,"inputSearchData")
+    const SearchHandler = (e) => {
+        const searchdata = products.filter((item) => item.title.toLowerCase().includes(e.target.value.toLowerCase()))
+        console.log(products, "inputSearchData")
         setSearchWithTitle(searchdata)
         setproducts(searchwithTitle)
     }
@@ -39,7 +39,7 @@ const Products = () => {
                     <input type="text" onChange={SearchHandler} placeholder="Search" />
                 </div>
                 <div class="display_Category_list">
-                <label forHtml="all-product" >
+                    <label forHtml="all-product" >
                         <input type="radio" value="all-product"
                             checked={selectedCheckbox === "all-product"}
                             onChange={handleCheckboxChange} />
@@ -63,7 +63,7 @@ const Products = () => {
                             onChange={handleCheckboxChange} />
                         <span>Electronics</span>
                     </label>
-                    
+
                     <label forHtml="women's clothing">
                         <input type="radio" value="women's clothing"
                             checked={selectedCheckbox === "women's clothing"}
@@ -74,9 +74,9 @@ const Products = () => {
 
             </aside>
             <main class="product_category_display" id="product_category_displayId">
-                <ProductCart inputSearchData={searchwithTitle}  filteredData={filteredData} products={products}/>
+                <ProductCart inputSearchData={searchwithTitle} filteredData={filteredData} products={products} />
             </main>
-        
+
         </div>
     </div>);
 }

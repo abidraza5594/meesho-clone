@@ -51,13 +51,13 @@ const CardDetails = () => {
             </div>
                 <div className="spacebetween">
                     <div>Total Product Price:</div>
-                    <div>&#x24;{allproductPrice}</div>  
+                    <div>&#x24;{allproductPrice.toFixed(2)}</div>  
                 </div>
                 <hr />
                 <div className="spacebetween">
                   <div className="totalorder">
                     <div>Order Total:</div> 
-                    <div>&#x24;{allproductPrice}</div>
+                    <div>&#x24;{allproductPrice.toFixed(2)}</div>
                   </div>
                 </div>
                 <p style={{marginLeft:"10px"}}>Clicking on 'Continue' will not deduct any money</p>
