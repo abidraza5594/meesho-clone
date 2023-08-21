@@ -9,7 +9,7 @@ const CardDetails = () => {
     const products = useSelector((state) => state.cart);
     const handleRemove = (productId) => {
         dispatch(remove(productId));
-    };
+    }; 
 
     const allproductPrice=products.reduce((accumulator, currentValue) => {
       return accumulator + currentValue.price * currentValue.quantity;
